@@ -27,7 +27,7 @@ To run this app locally, follow these steps:
 > ```
 > git clone https://github.com/IamInvictus-Jai/Chat-Magic-V-2.git
 > ```
-> 2. Navigate to the root directory of the project, open terminal and run
+> 2. Navigate to the root directory of the project, open the directory in terminal and run
 > ```
 > pip install requirements.txt
 > ```
