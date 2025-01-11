@@ -35,15 +35,15 @@ To run this app locally, follow these steps:
 > ```
 > python manage.py collectstatic
 > ```
-> 4. Once the staticfiles dir is created, run
+> 4. Once done, run
 > ```
 > python manage.py migrate
 > ```
-> 5. After the migrations have been applied,now you are good to go. run this cmd to start the server
+> 5. After the migrations have been applied, you are good to go. run this cmd to start the server
 > ```
 > python manage.py runserver
 > ```
-> 6. Access through the link provided using your browser.
+> 6. Access through the link ( http://127.0.0.1:8000/ )  provided using your browser.
 
 ## **Future Upgrades**
 > Bug Fixes
