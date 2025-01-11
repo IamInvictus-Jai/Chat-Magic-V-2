@@ -1,0 +1,379 @@
+@font-face {
+    font-family: myFont;
+    src: url(/static/fonts/corinto_town/CorintoTown.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-gradient: linear-gradient(45deg, #00f2fe, #4facfe);
+    --primary-color: #4facfe;
+    --text-color: #a7b3cc;
+    --bg-gradient: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-gradient);
+    color: #fff;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1rem, 5vw, 2rem);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.loading-page {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0);
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 3s ease-in 3s forwards;
+}
+
+.loader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.loader::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: black;
+    inset: 0;
+    position: absolute;
+    animation: text-reveal .8s ease-in 1.95s forwards;
+}
+.logo-img {
+    width: 4rem; 
+    height: 4rem;
+    transform: translateY(1rem);
+    animation: fadeOut 4s ease-in 6s forwards;
+}
+
+.loader_text {
+    font-weight: bold;
+    display: inline-block;
+    font-family: myFont;
+    font-size: 2rem;
+    animation: wave 0.9s linear calc(var(--delay)) 1, fadeOut 3s linear 3s forwards;
+}
+.loader_text:nth-child(n+6) {
+    background-image: linear-gradient(to bottom, #B0A6ED, #B571D6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.spinner {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    border: 4px solid #5e5e5e;
+    border-radius: 50%;
+    border-top-color: #fff;
+    opacity: 0;
+    animation: spin 1s linear 3.8s 6, opacity 6s linear 4s forwards;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    text-align: center;
+    margin: clamp(2rem, 8vh, 4rem) auto;
+}
+
+.logo {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInDown 1s ease-out 6s 1, fadeIn 1s ease-out 6s both 1;
+}
+
+.tagline {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    animation: fadeIn 1s ease-out 6.5s both 1;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    margin: 3rem 0;
+    padding: 0 1rem;
+}
+
+.feature {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 1s ease-out 6s 1, fadeIn 1s ease-out 6s both 1;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.feature p {
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.btn-wrapper {
+    margin-top: clamp(2rem, 5vh, 3rem);
+    animation: fadeIn 1s ease-out 6s both;
+}
+
+.wrapper-heading {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    min-width: 200px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-create {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.btn-join {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.pop-up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    inset: 0;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.pop-up.active {
+    display: flex;
+    opacity: 1;
+}
+
+.pop-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+    border-radius: 20px;
+    position: relative;
+    width: min(90%, 500px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.pop-up.active .pop-box {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+}
+
+.close-btn:hover {
+    color: white;
+}
+
+.room-input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.room-name:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.room-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--primary-gradient);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.room-btn:hover {
+    opacity: 0.9;
+}
+
+.room-btn:active {
+    transform: scale(0.98);
+}
+.room-id-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.room-id {
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 80%;
+}
+.room-btn.copy {
+    width: fit-content;
+    padding: .5rem;
+    height: fit-content;
+    border-radius: 50%;
+    margin: 1.5rem 0;
+}
+
+.cta-heading {
+    font-size: 1.2rem;
+}
+.cta-room-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+}
+
+@keyframes text-reveal {
+    0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    100% { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes opacity {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes wave {
+    0%, 44% { transform: translateY(0px); opacity: 1; }
+    18% { transform: translateY(-8px); opacity: 0.5; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 3s ease-in-out 6s infinite, fadeIn 1s ease-out 6s both 1;
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .pop-box {
+        margin: 1rem;
+    }
+
+    .close-btn {
+        top: .2rem;
+        right: .3rem;
+    }
+}

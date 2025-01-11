@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatMagic - Connect Instantly</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    {% load static %}
+    <!-- Fav Icon -->
+    <link
+      rel="icon"
+      href="{% static 'images/fav/chat-bubble.ico' %}?v={{ timestamp }}"
+    />
+    <!-- CSS FILES -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/landingPage.css' %}?v={{ timestamp }}"
+    />
+  </head>
+  <body>
+    <div class="loading-page">
+      <div class="loader">
+        <div class="logoAnime">
+          <img
+            src="{% static 'images/landingPage/myLogo.png' %}"
+            alt=""
+            class="logo-img"
+          />
+          <span class="loader_text" style="--delay: 2800ms">c</span>
+          <span class="loader_text" style="--delay: 2700ms">h</span>
+          <span class="loader_text" style="--delay: 2600ms">a</span>
+          <span class="loader_text" style="--delay: 2500ms">t</span>
+          <span class="loader_text colored" style="--delay: 2400ms">m</span>
+          <span class="loader_text colored" style="--delay: 2300ms">a</span>
+          <span class="loader_text colored" style="--delay: 2200ms">g</span>
+          <span class="loader_text colored" style="--delay: 2100ms">i</span>
+          <span class="loader_text colored" style="--delay: 2000ms">c</span>
+        </div>
+        <div class="spinner"></div>
+      </div>
+    </div>
+
+    <main class="container">
+      <h1 class="logo">ChatMagic</h1>
+      <p class="tagline">Where Conversations Come Alive ✨</p>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Instant Connection</h3>
+          <p>
+            Create or join chat rooms in seconds. No registration required. Just
+            jump right in and start chatting!
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Real-time Magic</h3>
+          <p>
+            Experience seamless, real-time conversations with crystal-clear
+            quality and zero lag.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Safe & Secure</h3>
+          <p>
+            Your conversations are protected with end-to-end encryption. What
+            happens in ChatMagic, stays in ChatMagic.
+          </p>
+        </div>
+      </div>
+
+      <div class="btn-wrapper">
+        <h2 class="wrapper-heading floating">Ready to Experience the Magic?</h2>
+        <div class="buttons">
+          <button class="btn btn-create">Create Room</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="pop-up" aria-modal="true" role="dialog">
+      <div class="pop-box">
+        <button class="close-btn" aria-label="Close popup">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2 class="cta-heading">Your Chat, Your Way 🌟</h2>
+        <input
+          type="text"
+          aria-label="User Name"
+          class="room-input room-user"
+          placeholder="Username..."
+        />
+        <input
+          type="text"
+          aria-label="Room Name"
+          class="room-input room-name"
+          placeholder="Room Name..."
+        />
+        <p class="invalid-message">
+          Username and Room name can only contain letters, numbers and _
+        </p>
+        <button class="room-btn"></button>
+      </div>
+    </div>
+
+    {% load static %}
+    <!-- JS FILES -->
+    <script src="{% static 'js/landingPage.js' %}?v={{ timestamp }}"></script>
+  </body>
+</html>
