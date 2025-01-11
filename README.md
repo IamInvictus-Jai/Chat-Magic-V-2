@@ -46,18 +46,18 @@ To run this app locally, follow these steps:
 > 6. Access through the link ( http://127.0.0.1:8000/ )  provided using your browser.
 
 ## **Future Upgrades**
-> Bug Fixes
-> UI Improvements
-> Performance Optimisation: focus on optimising the code for better performance
-> Login and SignUp: user authentication
-> Message Caching: for chat history so messages persists
-> Emoji Feature: new emoji section in chats
-> User Profile: enable user to create username, profile-pic and bio
-> New Chat Page Features: like theme selection, chat controls, etc
-> AI Bot Implementation: like that of meta in whatsapp and facebook
+> + Bug Fixes
+> + UI Improvements
+> + Performance Optimisation: focus on optimising the code for better performance
+> + Login and SignUp: user authentication
+> + Message Caching: for chat history so messages persists
+> + Emoji Feature: new emoji section in chats
+> + User Profile: enable user to create username, profile-pic and bio
+> + New Chat Page Features: like theme selection, chat controls, etc
+> + AI Bot Implementation: like that of meta in whatsapp and facebook
 
 ## **Live Demo**
-> https://chat-magic.onrender.com/
+> Live Deployed Link: https://chat-magic.onrender.com/
 
 > **Note: since it's hosted on a free tier, it may take 40s - 1min to load and there may be chances that the free tier have ended by this time. But no worries you can always try this app on your local machine.
 
