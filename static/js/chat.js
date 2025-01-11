@@ -30,7 +30,7 @@ let extractID = function () {
 }
 
 const timestamp = new Date().getTime();
-let url = `ws://${window.location.host}/ws/chat/${extractID()}/${userID}/?&_=${timestamp}`;
+let url = `wss://${window.location.host}/ws/chat/${extractID()}/${userID}/?&_=${timestamp}`;
 const chatSocket = new WebSocket(url);
 
 
