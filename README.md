@@ -24,30 +24,42 @@ This is Version 2 of its very first prototype.
 ## **Installation**
 To run this app locally, follow these steps:
 > 1. Clone the repository to your local machine
-> ```
-> git clone https://github.com/IamInvictus-Jai/Chat-Magic-V-2.git
-> ```
+>   ```
+>   git clone https://github.com/IamInvictus-Jai/Chat-Magic-V-2.git
+>   ```
 > 2. Navigate to the root directory of the project, open the directory in terminal and run
-> ```
-> pip install requirements.txt
-> ```
-> **Note: before proceeding head to static/js/chat.js file and in line 33 change wss://... to ws:// otherwise the connection would fail in local machine.
-> ```
-> let url = `ws://${window.location.host}/ws/chat/${extractID()}/${userID}/?&_=${timestamp}`;
-> ```
-> 3. Once the dependencies are installed, in terminal run
-> ```
-> python manage.py collectstatic
-> ```
-> 4. Once done, run
-> ```
-> python manage.py migrate
-> ```
-> 5. After the migrations have been applied, you are good to go. run this cmd to start the server
-> ```
-> python manage.py runserver
-> ```
-> 6. Access through the link ( http://127.0.0.1:8000/ )  provided using your browser.
+>   ```
+>   pip install requirements.txt
+>   ```
+> 3. Create .env file in the root dir
+> 4. Generate your django secret key using the following script
+>    ```python
+>    from django.core.management.utils import get_random_secret_key
+>    secret_key = get_random_secret_key()
+>    print(secret_key)
+>    ```
+> 5. Add these variables to .env file
+>   ```
+>   SECRET_KEY = your django secret key
+>   ALLOWED_HOSTS= 127.0.0.1,localhost
+>   ```
+> **Note: before proceeding head to static/js/chat.js file and in line 33 change wss://... to ws://... otherwise the connection would fail in local machine.
+>   ```
+>   let url = `ws://${window.location.host}/ws/chat/${extractID()}/${userID}/?&_=${timestamp}`;
+>   ```
+> 6. Once the dependencies are installed, in terminal run
+>   ```
+>   python manage.py collectstatic
+>   ```
+> 7. Once done, run
+>   ```
+>   python manage.py migrate
+>   ```
+> 8. After the migrations have been applied, you are good to go. run this cmd to start the server
+>   ```
+>   python manage.py runserver
+>   ```
+> 9. Access through the link ( http://127.0.0.1:8000/ )  provided using your browser.
 
 ## **Future Upgrades**
 > + Bug Fixes
