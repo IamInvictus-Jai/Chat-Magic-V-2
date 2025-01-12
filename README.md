@@ -31,6 +31,10 @@ To run this app locally, follow these steps:
 > ```
 > pip install requirements.txt
 > ```
+> **Note: before proceeding head to static/js/chat.js file and in line 33 change wss://... to ws:// otherwise the connection would fail in local machine.
+> ```
+> let url = `ws://${window.location.host}/ws/chat/${extractID()}/${userID}/?&_=${timestamp}`;
+> ```
 > 3. Once the dependencies are installed, in terminal run
 > ```
 > python manage.py collectstatic
