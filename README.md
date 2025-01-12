@@ -14,7 +14,7 @@ This is Version 2 of its very first prototype.
 > + Interactive UI: eye catchy ui design to enhance user experiences.
 > + Voice Typing: users can type just by speaking (using microsoft speech to text api) *use chrome or edge browser for best experience.
 > + Multiple rooms: Allows users to create and join different chat rooms, facilitating discussions on various topics.
-> + User Presence Indicators: Displays indicators to show when users are online or typing messages in real-time.
+> + User Presence Indicators: Displays indicators to show when users are online or left the chat in real-time.
 
 ## **Technologies Used**
 > + Built using HTML, CSS and JS.
