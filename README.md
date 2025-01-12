@@ -44,10 +44,10 @@ To run this app locally, follow these steps:
 >   ALLOWED_HOSTS= 127.0.0.1,localhost
 >   ```
 > **Note: before proceeding head to static/js/chat.js file and in line 33 change wss://... to ws://... otherwise the connection would fail in local machine.
->   ```
+>   ```js
 >   let url = `ws://${window.location.host}/ws/chat/${extractID()}/${userID}/?&_=${timestamp}`;
 >   ```
-> 6. Once the dependencies are installed, in terminal run
+> 6. Once everything is set up, in terminal run
 >   ```
 >   python manage.py collectstatic
 >   ```
